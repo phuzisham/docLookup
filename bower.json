@@ -1,0 +1,21 @@
+{
+  "name": "docLookup",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "David Hale <david.hale7@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/phuzisham/docLookup",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "v4.0.0-beta"
+  }
+}
