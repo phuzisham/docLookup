@@ -1,27 +1,28 @@
 import { Doc } from './../js/doc.js';
-let apiKey = require('./../.env').apiKey;
 let docClass = new Doc();
 
 $(document).ready(function(){
-  docClass.callApi().then(function(response) {
+  $('#search').submit(function(e) {
+    e.preventDefault();
+    alert('djf');
+    let query = $('#symptom').val();
+    displayDoctors(query);
+  })
+});
+
+function displayDoctors(query) {
+  docClass.callApi(query).then(function(response) {
     let parsed = JSON.parse(response);
     let arr = [];
-    // debugger;
     parsed.data.forEach(function(doc) {
-
-        arr.push(doc.practices);
-
-      arr = arr.filter( function( item, index, inputArray ) {
-        return inputArray.indexOf(item) == index;
-      });
-      arr = arr.sort();
+      arr.push(doc.practices);
     });
     arr.forEach(function(doc) {
-      $('#docName').append(`<li><a href='${doc}' id='${doc}' class='doc'>${doc}</a></li>`);
+      $('#docName').append(`<li><a href='${doc[0].website}' id='${doc}' class='doc'>${doc[0].name}</a></li>`);
     });
     // displayDoctors();
   });
-});
+}
 
 // function displayDoctors() {
 //   $('a').click(function(event) {
