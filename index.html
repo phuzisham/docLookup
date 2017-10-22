@@ -9,15 +9,24 @@
     <title>Doc Lookup</title>
   </head>
   <body>
-    <h1>Obligatory Heading</h1>
+    <h1>Doc Search</h1>
     <div class="container">
-      <form id="search">
-        <div class="form-control">
-          <label for="symptom">Symptom: </label>
-          <input id="symptom" type="text">
-        </div>
-        <button id="searchButton" type="submit">Submit</button>
-      </form>
+      <div class="card">
+        <form id="search">
+            <label for="symptom">Symptom: </label>
+            <input id="symptom" type="text" required>
+          <button id="searchButton" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="card">
+        <form id="searchName">
+            <label for="name">Name: </label>
+            <input id="name" type="text" required>
+          <button id="searchButtonName" type="submit">Submit</button>
+        </form>
+      </div>
+
+
       <ul id="docName"></ul>
     </div>
   </body>
