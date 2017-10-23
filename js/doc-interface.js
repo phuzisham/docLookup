@@ -23,7 +23,8 @@ function displayDoctorsSymptom(query) {
       arr.push(doc.practices);
     });
     arr.forEach(function(doc) {
-      $('#docName').append(`<li><a href='${doc[0].website}' id='${doc.uid}' class='doc'>${doc[0].name}</a></li>`);
+      debugger;
+      $('#docName').append(`<li><a href='${doc[0].website}' id='${doc[0].uid}' class='doc'>${doc[0].name}</a></li>`);
     });
   });
 }
