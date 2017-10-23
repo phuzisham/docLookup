@@ -7,3 +7,7 @@ body {
   margin: 20px;
   background-color: rgb(184, 79, 185);
 }
+
+li {
+  list-style: none;
+}
