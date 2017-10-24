@@ -1,4 +1,4 @@
-# _Doctor Lookup_
+# Doctor Lookup
 
 #### _A simple doctor search. Last Modified: 10.24.2017_
 
